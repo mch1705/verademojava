@@ -19,7 +19,7 @@ jobs:
     - name: Build with Maven
       working-directory: ./app
       run:  mvn -B package --file pom.xml
-    - run: mkdir staging && cp target/*.war staging
+    - run: mkdir staging && cp target/verademo.war staging
     - uses: actions/upload-artifact@v2
       with:
         name: Package
