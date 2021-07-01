@@ -13,6 +13,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
+      working-directory: ./app
       run: mvn -B package --file pom.xml
     - name: Download pipeline code
       uses: wei/curl@master
