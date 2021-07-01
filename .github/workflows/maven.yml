@@ -23,6 +23,7 @@ jobs:
       with:
         args: -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
     - name: Unzip the Pipeline Scanner
+      working-directory: ./app
       run: unzip pipeline-scan-LATEST.zip
     - name: Run Pipeline Scanner
       continue-on-error: true
